@@ -8,6 +8,12 @@ function proxy(r) {
       if ("parallel_tool_calls" in json) {
         json.parallel_tool_calls = true;
       }
+      if ("tool_choice" in json) {
+        json.tool_choice = "auto";
+      }
+      if ("tool_choice" in json) {
+          json.tool_choice = "auto";
+      }
 
       body = JSON.stringify(json);
     } catch (e) {
